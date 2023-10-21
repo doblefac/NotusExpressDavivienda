@@ -1,0 +1,1572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.logytechmobile.com/NotusIlsWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.logytechmobile.com/NotusIlsWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">WebService que provee los procedimientos y funciones necesarios para llevar a cabo la sincronización de información de BancaSegurosCEM</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.logytechmobile.com/NotusIlsWebService/">
+      <s:element name="ConsultarCampaniasCEM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infoFiltros" type="tns:WsFiltroCampania" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsReporte">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WsFiltroCampania">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdCampania" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreCampania" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Activo" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListaTipoServicio" type="tns:ArrayOfAnyType" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdTipoServicio" type="tns:TipoServicio" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdClienteExterno" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdEmpresa" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="TipoServicio">
+        <s:restriction base="s:string">
+          <s:enumeration value="Reposicion" />
+          <s:enumeration value="Venta" />
+          <s:enumeration value="CesionContrato" />
+          <s:enumeration value="Migracion" />
+          <s:enumeration value="ServicioTecnico" />
+          <s:enumeration value="Portacion" />
+          <s:enumeration value="OrdenCompra" />
+          <s:enumeration value="Siembra" />
+          <s:enumeration value="VentaWeb" />
+          <s:enumeration value="ServiciosFinancieros" />
+          <s:enumeration value="VentaEDUCLIC" />
+          <s:enumeration value="VentaCorporativa" />
+          <s:enumeration value="CampañaClaroFijo" />
+          <s:enumeration value="TiendaVirtual" />
+          <s:enumeration value="VentaCorporativaPrestamo" />
+          <s:enumeration value="EquiposReparadosST" />
+          <s:enumeration value="ServiciosFinancierosBancolombia" />
+          <s:enumeration value="ServiciosFinancierosDavivienda" />
+          <s:enumeration value="DaviviendaSamsung" />
+          <s:enumeration value="Servicios_Financieros_Davivienda_AM_PM" />
+          <s:enumeration value="MercadoNaturalFeria" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ResultadoProceso">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Valor" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultarCampaniasCEMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarCampaniasCEMResult" type="tns:ResultadoProceso" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsReporte">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarServicioWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infoServicio" type="tns:WsRegistroServicioMensajeria" />
+            <s:element minOccurs="1" maxOccurs="1" name="idServicio" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WsRegistroServicioMensajeria">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdServicioMensajeria" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaAgenda" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdJornada" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdEmpresa" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdEstado" type="tns:EstadoServicio" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Identicacion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdCiudad" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdCampania" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdTipoServicio" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListProductos" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListTipoServicio" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListCupoProducto" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActividadLaboral" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Observacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodOficinaCliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TelefonoFijo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombresCompleto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrimerApellido" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SegundoApellido" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoEstrategiaComercial" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sexo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Celular" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TelefonoAdicional" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoAgenteVendedor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Correo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="EstadoServicio">
+        <s:restriction base="s:string">
+          <s:enumeration value="EnCuarentena" />
+          <s:enumeration value="Creado" />
+          <s:enumeration value="Confirmado" />
+          <s:enumeration value="Despachado" />
+          <s:enumeration value="Entregado" />
+          <s:enumeration value="Cerrado" />
+          <s:enumeration value="DespachadoCambio" />
+          <s:enumeration value="Legalizado" />
+          <s:enumeration value="Transito" />
+          <s:enumeration value="Devolucion" />
+          <s:enumeration value="AsignadoRuta" />
+          <s:enumeration value="RecibidoCliente" />
+          <s:enumeration value="RecibidoST" />
+          <s:enumeration value="RevisionServicioTecnico" />
+          <s:enumeration value="ServicioTecnico" />
+          <s:enumeration value="Preventa" />
+          <s:enumeration value="Anulado" />
+          <s:enumeration value="Radicado" />
+          <s:enumeration value="DevueltoCallCenter" />
+          <s:enumeration value="PendienteRecoleccion" />
+          <s:enumeration value="PendienteCierre" />
+          <s:enumeration value="Entregadoalegalizacion" />
+          <s:enumeration value="AnuladoPorSistemaDevCallCenter" />
+          <s:enumeration value="AnuladoPorSistemaPreventa" />
+          <s:enumeration value="AnuladoDevCallCenter" />
+          <s:enumeration value="AnuladoPreventa" />
+          <s:enumeration value="GestionadoConNovedadEnContacto" />
+          <s:enumeration value="SerialesAsignados" />
+          <s:enumeration value="Facturado" />
+          <s:enumeration value="Asignadoaresponsable" />
+          <s:enumeration value="RecuperacionMesaControl" />
+          <s:enumeration value="PendienteAprobacionCalidad" />
+          <s:enumeration value="RechazadoCalidadContactCenter" />
+          <s:enumeration value="VerificacionMesaControl" />
+          <s:enumeration value="RadicadoBanco" />
+          <s:enumeration value="CampaniaFinalizada" />
+          <s:enumeration value="RechazadoBanco" />
+          <s:enumeration value="RechazadoMesaControl" />
+          <s:enumeration value="DestruccionDocumentosMC" />
+          <s:enumeration value="Recogido" />
+          <s:enumeration value="Reagendado" />
+          <s:enumeration value="EntregaParcial" />
+          <s:enumeration value="NoCobertura" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RegistrarServicioWSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarServicioWSResult" type="tns:ResultadoProceso" />
+            <s:element minOccurs="1" maxOccurs="1" name="idServicio" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarServicioWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infoServicio" type="tns:WsRegistroServicioMensajeria" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarServicioWSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActualizarServicioWSResult" type="tns:ResultadoProceso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarServicioWSeMergia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infoServicio" type="tns:WsRegistroServicioMensajeriaEmergia" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WsRegistroServicioMensajeriaEmergia">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdServicioMensajeria" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaAgenda" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdJornada" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdCiudad" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Observacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TelefonoFijo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ActualizarServicioWSeMergiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActualizarServicioWSeMergiaResult" type="tns:ResultadoProceso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarReferencias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infoServicio" type="tns:WsRegistroServicioMensajeria" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarReferenciasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AgregarReferenciasResult" type="tns:ResultadoProceso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarReferencias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infoServicio" type="tns:WsRegistroServicioMensajeria" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarReferenciasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EliminarReferenciasResult" type="tns:ResultadoProceso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCapacidadEntrega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infoCapacidad" type="tns:WsInfoCapacidadEntrega" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsCantidad">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WsInfoCapacidadEntrega">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdRegistro" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdEmpresa" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdBodega" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdCiudad" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaInicial" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaFinal" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdJornada" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdAgrupacion" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdCampania" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultarCapacidadEntregaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarCapacidadEntregaResult" type="tns:ResultadoProceso" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsCantidad">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarDisponibilidadDocumentos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infoDisponibilidad" type="tns:WsInfoDisponibilidad" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsDisponibilidad">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WsInfoDisponibilidad">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdCampania" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoDocumento" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdCiudad" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListProductos" type="tns:ArrayOfInt" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultarDisponibilidadDocumentosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarDisponibilidadDocumentosResult" type="tns:ResultadoProceso" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsDisponibilidad">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaRegistrosServicioWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infoServicio" type="tns:WsRegistroServicioMensajeria" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaRegistrosServicioWSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidaRegistrosServicioWSResult" type="tns:ResultadoProceso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarClientesExternos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsReporte">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarClientesExternosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarClientesExternosResult" type="tns:ResultadoProceso" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsReporte">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="idEmpresa" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBodegas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBodegasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarBodegasResult" type="tns:ResultadoProceso" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarProductos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="pListIdClienteExterno" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarProductosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarProductosResult" type="tns:ResultadoProceso" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarTipoCampanias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsReporte">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarTipoCampaniasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarTipoCampaniasResult" type="tns:ResultadoProceso" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsReporte">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarServicios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsReporte">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="_esFinanciero" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarServiciosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarServiciosResult" type="tns:ResultadoProceso" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsReporte">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="_esFinanciero" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarDocumentos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsReporte">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarDocumentosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarDocumentosResult" type="tns:ResultadoProceso" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsReporte">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCampaniaBodega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="idCampania" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCampaniaBodegaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarCampaniaBodegaResult" type="tns:ResultadoProceso" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="idCampania" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCampaniaProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="idCampania" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoProducto" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCampaniaProductoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarCampaniaProductoResult" type="tns:ResultadoProceso" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="idCampania" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoProducto" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCampaniaDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="idCampania" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCampaniaDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarCampaniaDocumentoResult" type="tns:ResultadoProceso" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="idCampania" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarCampaniaWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infoCampania" type="tns:WsRegistroCampania" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WsRegistroCampania">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdCampania" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaInicio" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaFinGestionCal" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaFinGestionCem" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaFinRadicado" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Activo" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="MetaCliente" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MetaCallcenter" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FechaLlegada" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListCiudades" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListBodegas" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListProductoExterno" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListDocumentoFinanciero" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListTiposDeServicio" type="tns:ArrayOfInt" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdClienteExterno" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdEmpresa" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdTipoCampania" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdSistema" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodEstrategia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoEstrategiaActualizar" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RegistrarCampaniaWSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarCampaniaWSResult" type="tns:ResultadoProceso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarCampaniaWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infoCampania" type="tns:WsRegistroCampania" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarCampaniaWSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActualizarCampaniaWSResult" type="tns:ResultadoProceso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarInformacionTipoServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsReporte">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarInformacionTipoServicioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargarInformacionTipoServicioResult" type="tns:ResultadoProceso" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsReporte">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarCodigoEstrategiaWs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infocampania" type="tns:WsRegistroCampania" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarCodigoEstrategiaWsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GuardarCodigoEstrategiaWsResult" type="tns:ResultadoProceso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarCodigoEstrategiaWs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infocampania" type="tns:WsRegistroCampania" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarCodigoEstrategiaWsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActualizarCodigoEstrategiaWsResult" type="tns:ResultadoProceso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarCodigoEstrategiaWs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infocampania" type="tns:WsRegistroCampania" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarCodigoEstrategiaWsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EliminarCodigoEstrategiaWsResult" type="tns:ResultadoProceso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AsociarCodigoEstrategiaWs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="infocampania" type="tns:WsRegistroCampania" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AsociarCodigoEstrategiaWsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AsociarCodigoEstrategiaWsResult" type="tns:ResultadoProceso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCiudadesCampania">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="idCampania" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCiudadesCampaniaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarCiudadesCampaniaResult" type="tns:ResultadoProceso" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ConsultarCampaniasCEMSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarCampaniasCEM" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCampaniasCEMSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarCampaniasCEMResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarServicioWSSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarServicioWS" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarServicioWSSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarServicioWSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarServicioWSSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarServicioWS" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarServicioWSSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarServicioWSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarServicioWSeMergiaSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarServicioWSeMergia" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarServicioWSeMergiaSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarServicioWSeMergiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregarReferenciasSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregarReferencias" />
+  </wsdl:message>
+  <wsdl:message name="AgregarReferenciasSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregarReferenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarReferenciasSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarReferencias" />
+  </wsdl:message>
+  <wsdl:message name="EliminarReferenciasSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarReferenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCapacidadEntregaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarCapacidadEntrega" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCapacidadEntregaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarCapacidadEntregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarDisponibilidadDocumentosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarDisponibilidadDocumentos" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarDisponibilidadDocumentosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarDisponibilidadDocumentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidaRegistrosServicioWSSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidaRegistrosServicioWS" />
+  </wsdl:message>
+  <wsdl:message name="ValidaRegistrosServicioWSSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidaRegistrosServicioWSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarClientesExternosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarClientesExternos" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarClientesExternosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarClientesExternosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBodegasSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarBodegas" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBodegasSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarBodegasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarProductosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarProductos" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarProductosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarProductosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTipoCampaniasSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarTipoCampanias" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTipoCampaniasSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarTipoCampaniasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarServiciosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarServicios" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarServiciosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarServiciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarDocumentosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarDocumentos" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarDocumentosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarDocumentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCampaniaBodegaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarCampaniaBodega" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCampaniaBodegaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarCampaniaBodegaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCampaniaProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarCampaniaProducto" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCampaniaProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarCampaniaProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCampaniaDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarCampaniaDocumento" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCampaniaDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarCampaniaDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarCampaniaWSSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarCampaniaWS" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarCampaniaWSSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarCampaniaWSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarCampaniaWSSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarCampaniaWS" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarCampaniaWSSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarCampaniaWSResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargarInformacionTipoServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:CargarInformacionTipoServicio" />
+  </wsdl:message>
+  <wsdl:message name="CargarInformacionTipoServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:CargarInformacionTipoServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuardarCodigoEstrategiaWsSoapIn">
+    <wsdl:part name="parameters" element="tns:GuardarCodigoEstrategiaWs" />
+  </wsdl:message>
+  <wsdl:message name="GuardarCodigoEstrategiaWsSoapOut">
+    <wsdl:part name="parameters" element="tns:GuardarCodigoEstrategiaWsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarCodigoEstrategiaWsSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarCodigoEstrategiaWs" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarCodigoEstrategiaWsSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarCodigoEstrategiaWsResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarCodigoEstrategiaWsSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarCodigoEstrategiaWs" />
+  </wsdl:message>
+  <wsdl:message name="EliminarCodigoEstrategiaWsSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarCodigoEstrategiaWsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AsociarCodigoEstrategiaWsSoapIn">
+    <wsdl:part name="parameters" element="tns:AsociarCodigoEstrategiaWs" />
+  </wsdl:message>
+  <wsdl:message name="AsociarCodigoEstrategiaWsSoapOut">
+    <wsdl:part name="parameters" element="tns:AsociarCodigoEstrategiaWsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCiudadesCampaniaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarCiudadesCampania" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCiudadesCampaniaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarCiudadesCampaniaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="NotusIlsServiceSoap">
+    <wsdl:operation name="ConsultarCampaniasCEM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite consultar una Campaña, según los filtros establecidos</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarCampaniasCEMSoapIn" />
+      <wsdl:output message="tns:ConsultarCampaniasCEMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarServicioWS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite registrar un servicio (CEM), para productos financieros</wsdl:documentation>
+      <wsdl:input message="tns:RegistrarServicioWSSoapIn" />
+      <wsdl:output message="tns:RegistrarServicioWSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarServicioWS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite actualizar un servicio (CEM), para productos financieros</wsdl:documentation>
+      <wsdl:input message="tns:ActualizarServicioWSSoapIn" />
+      <wsdl:output message="tns:ActualizarServicioWSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarServicioWSeMergia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite actualizar un servicio (CEM), para productos financieros</wsdl:documentation>
+      <wsdl:input message="tns:ActualizarServicioWSeMergiaSoapIn" />
+      <wsdl:output message="tns:ActualizarServicioWSeMergiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarReferencias">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite agregar referencias a un servicio (CEM), para productos financieros</wsdl:documentation>
+      <wsdl:input message="tns:AgregarReferenciasSoapIn" />
+      <wsdl:output message="tns:AgregarReferenciasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarReferencias">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite eliminar referencias a un servicio (CEM), para productos financieros</wsdl:documentation>
+      <wsdl:input message="tns:EliminarReferenciasSoapIn" />
+      <wsdl:output message="tns:EliminarReferenciasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCapacidadEntrega">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite consultar las capacidades de entrega, para agendamiento</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarCapacidadEntregaSoapIn" />
+      <wsdl:output message="tns:ConsultarCapacidadEntregaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDisponibilidadDocumentos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite consultar la disponibilidad de inventario de documentos para servicio financiero</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarDisponibilidadDocumentosSoapIn" />
+      <wsdl:output message="tns:ConsultarDisponibilidadDocumentosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaRegistrosServicioWS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que validar un registro (CEM), para productos financieros</wsdl:documentation>
+      <wsdl:input message="tns:ValidaRegistrosServicioWSSoapIn" />
+      <wsdl:output message="tns:ValidaRegistrosServicioWSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClientesExternos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite consultar los clientes finales.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarClientesExternosSoapIn" />
+      <wsdl:output message="tns:ConsultarClientesExternosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBodegas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite consultar las bodegas.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarBodegasSoapIn" />
+      <wsdl:output message="tns:ConsultarBodegasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProductos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite consultar los productos.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarProductosSoapIn" />
+      <wsdl:output message="tns:ConsultarProductosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTipoCampanias">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite consultar los tipos de campañas.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarTipoCampaniasSoapIn" />
+      <wsdl:output message="tns:ConsultarTipoCampaniasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarServicios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite consultar los tipos de servicios.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarServiciosSoapIn" />
+      <wsdl:output message="tns:ConsultarServiciosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDocumentos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite consultar los documentos(Productos Financieros).</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarDocumentosSoapIn" />
+      <wsdl:output message="tns:ConsultarDocumentosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCampaniaBodega">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite consultar las bodegas ligadas a una campania.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarCampaniaBodegaSoapIn" />
+      <wsdl:output message="tns:ConsultarCampaniaBodegaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCampaniaProducto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite consultar los productos ligados a una campania.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarCampaniaProductoSoapIn" />
+      <wsdl:output message="tns:ConsultarCampaniaProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCampaniaDocumento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite consultar los documentos ligados a una campania.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarCampaniaDocumentoSoapIn" />
+      <wsdl:output message="tns:ConsultarCampaniaDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCampaniaWS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite registrar una campania</wsdl:documentation>
+      <wsdl:input message="tns:RegistrarCampaniaWSSoapIn" />
+      <wsdl:output message="tns:RegistrarCampaniaWSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCampaniaWS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite actualizar una campania</wsdl:documentation>
+      <wsdl:input message="tns:ActualizarCampaniaWSSoapIn" />
+      <wsdl:output message="tns:ActualizarCampaniaWSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarInformacionTipoServicio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite consultar los clientes finales.</wsdl:documentation>
+      <wsdl:input message="tns:CargarInformacionTipoServicioSoapIn" />
+      <wsdl:output message="tns:CargarInformacionTipoServicioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarCodigoEstrategiaWs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite guardar un código de estrategia.</wsdl:documentation>
+      <wsdl:input message="tns:GuardarCodigoEstrategiaWsSoapIn" />
+      <wsdl:output message="tns:GuardarCodigoEstrategiaWsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCodigoEstrategiaWs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite actualizar un código de estrategia.</wsdl:documentation>
+      <wsdl:input message="tns:ActualizarCodigoEstrategiaWsSoapIn" />
+      <wsdl:output message="tns:ActualizarCodigoEstrategiaWsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCodigoEstrategiaWs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite Eliminar un código de estrategia.</wsdl:documentation>
+      <wsdl:input message="tns:EliminarCodigoEstrategiaWsSoapIn" />
+      <wsdl:output message="tns:EliminarCodigoEstrategiaWsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AsociarCodigoEstrategiaWs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite Asociar un código de estrategia a una campania.</wsdl:documentation>
+      <wsdl:input message="tns:AsociarCodigoEstrategiaWsSoapIn" />
+      <wsdl:output message="tns:AsociarCodigoEstrategiaWsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCiudadesCampania">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Función que permite consultar las ciudades por campaña.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarCiudadesCampaniaSoapIn" />
+      <wsdl:output message="tns:ConsultarCiudadesCampaniaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NotusIlsServiceSoap" type="tns:NotusIlsServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultarCampaniasCEM">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarCampaniasCEM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarServicioWS">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/RegistrarServicioWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarServicioWS">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ActualizarServicioWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarServicioWSeMergia">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ActualizarServicioWSeMergia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarReferencias">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/AgregarReferencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarReferencias">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/EliminarReferencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCapacidadEntrega">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarCapacidadEntrega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDisponibilidadDocumentos">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarDisponibilidadDocumentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaRegistrosServicioWS">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ValidaRegistrosServicioWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClientesExternos">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarClientesExternos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBodegas">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarBodegas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProductos">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarProductos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTipoCampanias">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarTipoCampanias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarServicios">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarServicios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDocumentos">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarDocumentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCampaniaBodega">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarCampaniaBodega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCampaniaProducto">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarCampaniaProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCampaniaDocumento">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarCampaniaDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCampaniaWS">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/RegistrarCampaniaWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCampaniaWS">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ActualizarCampaniaWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarInformacionTipoServicio">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/CargarInformacionTipoServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarCodigoEstrategiaWs">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/GuardarCodigoEstrategiaWs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCodigoEstrategiaWs">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ActualizarCodigoEstrategiaWs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCodigoEstrategiaWs">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/EliminarCodigoEstrategiaWs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsociarCodigoEstrategiaWs">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/AsociarCodigoEstrategiaWs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCiudadesCampania">
+      <soap:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarCiudadesCampania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NotusIlsServiceSoap12" type="tns:NotusIlsServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultarCampaniasCEM">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarCampaniasCEM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarServicioWS">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/RegistrarServicioWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarServicioWS">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ActualizarServicioWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarServicioWSeMergia">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ActualizarServicioWSeMergia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarReferencias">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/AgregarReferencias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarReferencias">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/EliminarReferencias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCapacidadEntrega">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarCapacidadEntrega" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDisponibilidadDocumentos">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarDisponibilidadDocumentos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaRegistrosServicioWS">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ValidaRegistrosServicioWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClientesExternos">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarClientesExternos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBodegas">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarBodegas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProductos">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarProductos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTipoCampanias">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarTipoCampanias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarServicios">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarServicios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDocumentos">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarDocumentos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCampaniaBodega">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarCampaniaBodega" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCampaniaProducto">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarCampaniaProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCampaniaDocumento">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarCampaniaDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCampaniaWS">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/RegistrarCampaniaWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCampaniaWS">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ActualizarCampaniaWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarInformacionTipoServicio">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/CargarInformacionTipoServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarCodigoEstrategiaWs">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/GuardarCodigoEstrategiaWs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCodigoEstrategiaWs">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ActualizarCodigoEstrategiaWs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCodigoEstrategiaWs">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/EliminarCodigoEstrategiaWs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsociarCodigoEstrategiaWs">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/AsociarCodigoEstrategiaWs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCiudadesCampania">
+      <soap12:operation soapAction="http://www.logytechmobile.com/NotusIlsWebService/ConsultarCiudadesCampania" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NotusIlsService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">WebService que provee los procedimientos y funciones necesarios para llevar a cabo la sincronización de información de BancaSegurosCEM</wsdl:documentation>
+    <wsdl:port name="NotusIlsServiceSoap" binding="tns:NotusIlsServiceSoap">
+      <soap:address location="http://appscde.logytechmobile.com/NotusCEmFinWS/WebService/NotusIlsService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NotusIlsServiceSoap12" binding="tns:NotusIlsServiceSoap12">
+      <soap12:address location="http://appscde.logytechmobile.com/NotusCEmFinWS/WebService/NotusIlsService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

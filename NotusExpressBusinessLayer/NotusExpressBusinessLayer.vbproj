@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC7F844C-8506-4DE5-96C3-120E31A6A74E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NotusExpressBusinessLayer</RootNamespace>
+    <AssemblyName>NotusExpressBusinessLayer</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>%24/NotusExpressDavivienda/CodigoFuente/Pro/NotusExpressDavivienda/NotusExpressBusinessLayer</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://desarrollologytechmobile.visualstudio.com</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>NotusExpressBusinessLayer.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>NotusExpressBusinessLayer.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Web.ASPxScheduler.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v18.1.Core, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v18.1.Reporting.Extensions, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EO.Web">
+      <HintPath>..\..\..\..\..\LibreriasClase\CodigoFuente\Base\UtilidadesDDL\EO.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Spreadsheet, Version=31.3.30.1124, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\LibreriasClase\CodigoFuente\Base\UtilidadesDDL\GemBox.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\LibreriasClase\CodigoFuente\Base\UtilidadesDDL\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="office">
+      <HintPath>..\..\..\..\..\LibreriasClase\CodigoFuente\Base\UtilidadesDDL\office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comunes\AdministradorCorreo.vb" />
+    <Compile Include="Comunes\AsuntoNotificacion.vb" />
+    <Compile Include="Comunes\ConfigValues.vb" />
+    <Compile Include="Comunes\Estructuras.vb" />
+    <Compile Include="Comunes\HerramientasGenerales.vb" />
+    <Compile Include="Comunes\InfoUrlService.vb" />
+    <Compile Include="Comunes\SeparadorArchivo.vb" />
+    <Compile Include="Comunes\SeparadorArchivoColeccion.vb" />
+    <Compile Include="ControlAcceso\Cargo.vb" />
+    <Compile Include="ControlAcceso\CargosColeccion.vb" />
+    <Compile Include="ControlAcceso\ColeccionPerfiles.vb" />
+    <Compile Include="ControlAcceso\Empresa.vb" />
+    <Compile Include="ControlAcceso\EmpresaColeccion.vb" />
+    <Compile Include="ControlAcceso\Menu.vb" />
+    <Compile Include="ControlAcceso\MenuColeccion.vb" />
+    <Compile Include="ControlAcceso\Perfil.vb" />
+    <Compile Include="ControlAcceso\PerfilColeccion.vb" />
+    <Compile Include="ControlAcceso\Permiso.vb" />
+    <Compile Include="ControlAcceso\TipoPersona.vb" />
+    <Compile Include="ControlAcceso\TipoPersonaColeccion.vb" />
+    <Compile Include="ControlAcceso\UnidadDeNegocio.vb" />
+    <Compile Include="ControlAcceso\UnidadDeNegocioColeccion.vb" />
+    <Compile Include="ControlAcceso\UsuarioSistema.vb" />
+    <Compile Include="ControlAcceso\UsuarioSistemaColeccion.vb" />
+    <Compile Include="ControlAcceso\ValidadorAcceso.vb" />
+    <Compile Include="General\CargadorArchivoMetasComerciales.vb" />
+    <Compile Include="General\CargadorArchivoMetasComercialesPorAsesor.vb" />
+    <Compile Include="General\InfoDenegacionOpcionFuncionalRestringida.vb" />
+    <Compile Include="General\InfoPermisoOpcionFuncionalRestringida.vb" />
+    <Compile Include="General\ResultadoProceso.vb" />
+    <Compile Include="GestionComercial\AbreviaturaDireccion.vb" />
+    <Compile Include="GestionComercial\AbreviaturaDireccionaColeccion.vb" />
+    <Compile Include="GestionComercial\AccionesSerial.vb" />
+    <Compile Include="GestionComercial\ActualizarIdClientePreventa.vb" />
+    <Compile Include="GestionComercial\ActualizarIdentificacionCliente.vb" />
+    <Compile Include="GestionComercial\BodegaCampania.vb" />
+    <Compile Include="GestionComercial\BodegaCampaniaColeccion.vb" />
+    <Compile Include="GestionComercial\BodegaDestino.vb" />
+    <Compile Include="GestionComercial\BodegaDestinoColeccion.vb" />
+    <Compile Include="GestionComercial\Campania.vb" />
+    <Compile Include="GestionComercial\CampaniaColeccion.vb" />
+    <Compile Include="GestionComercial\CargueClientes.vb" />
+    <Compile Include="GestionComercial\CargueClientesPresenciales.vb" />
+    <Compile Include="GestionComercial\CategoriaCredito.vb" />
+    <Compile Include="GestionComercial\CategoriaCreditoColeccion.vb" />
+    <Compile Include="GestionComercial\ClienteFinal.vb" />
+    <Compile Include="GestionComercial\ClienteFinalColeccion.vb" />
+    <Compile Include="GestionComercial\ClienteFinalProducto.vb" />
+    <Compile Include="GestionComercial\ClienteFinalProductoColeccion.vb" />
+    <Compile Include="GestionComercial\ConfirmarDestruccionSeriales.vb" />
+    <Compile Include="GestionComercial\ConfirmarNovedadesTemporales.vb" />
+    <Compile Include="GestionComercial\ConsecutivoActaDestruccion.vb" />
+    <Compile Include="GestionComercial\ConsultarBodegaOrigen.vb" />
+    <Compile Include="GestionComercial\ConsultarNovedades.vb" />
+    <Compile Include="GestionComercial\ConsultarNovedadesTemporales.vb" />
+    <Compile Include="GestionComercial\ConsultarSeriales.vb" />
+    <Compile Include="GestionComercial\ConsultarSerialesConNovedadInventario.vb" />
+    <Compile Include="GestionComercial\CorteReportePresupuestoGestiones.vb" />
+    <Compile Include="GestionComercial\CorteReportePresupuestoGestionesColeccion.vb" />
+    <Compile Include="GestionComercial\CustomEvent.vb" />
+    <Compile Include="GestionComercial\Define.vb" />
+    <Compile Include="GestionComercial\DescargarSolicitudCreditoPersonaNatural.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\DetallePresupuestoDeGestionesDeVentaColeccion.vb" />
+    <Compile Include="GestionComercial\DocumentoCampania.vb" />
+    <Compile Include="GestionComercial\DocumentoCampaniaColeccion.vb" />
+    <Compile Include="GestionComercial\EliminarNovedad.vb" />
+    <Compile Include="GestionComercial\Empresas.vb" />
+    <Compile Include="GestionComercial\EmpresasColeccion.vb" />
+    <Compile Include="GestionComercial\EquivalenciasDireccion.vb" />
+    <Compile Include="GestionComercial\EquivalenciasDireccionColeccion.vb" />
+    <Compile Include="GestionComercial\EstadosSeriales.vb" />
+    <Compile Include="GestionComercial\EstadosSerialesColeccion.vb" />
+    <Compile Include="GestionComercial\EstatusLaboral.vb" />
+    <Compile Include="GestionComercial\EstatusLaboralColeccion.vb" />
+    <Compile Include="GestionComercial\FiltroSerialesConNovedadInventario.vb" />
+    <Compile Include="GestionComercial\FiltroVentasConNovedades.vb" />
+    <Compile Include="GestionComercial\GestionDeVenta.vb" />
+    <Compile Include="GestionComercial\GestionDeVentaColeccion.vb" />
+    <Compile Include="GestionComercial\GestionDeVentaDetalle.vb" />
+    <Compile Include="GestionComercial\GestionDeVentaDetalleColeccion.vb" />
+    <Compile Include="GestionComercial\GestionDeVentaDevolucionesCall.vb" />
+    <Compile Include="GestionComercial\GestionVentaCallCenter.vb" />
+    <Compile Include="GestionComercial\GestionVentaMovil.vb" />
+    <Compile Include="GestionComercial\GestionVentaRegistraSerial.vb" />
+    <Compile Include="GestionComercial\HistoriaTransacciones.vb" />
+    <Compile Include="GestionComercial\IndicadorCumplimientoMeta.vb" />
+    <Compile Include="GestionComercial\IndicadorCumplimientoMetaColeccion.vb" />
+    <Compile Include="GestionComercial\InfoGestionVenta.vb" />
+    <Compile Include="GestionComercial\InfoGestionVentaDeclinada.vb" />
+    <Compile Include="GestionComercial\InfoPreventa.vb" />
+    <Compile Include="GestionComercial\InformacionReferido.vb" />
+    <Compile Include="GestionComercial\InfoVenta.vb" />
+    <Compile Include="GestionComercial\InfoVentaDeclinada.vb" />
+    <Compile Include="GestionComercial\InsertarNovedadesVentaNueva.vb" />
+    <Compile Include="GestionComercial\InsertarTemporalDestruirSerial.vb" />
+    <Compile Include="GestionComercial\InsertarTemporalNovedades.vb" />
+    <Compile Include="GestionComercial\MetaComercial.vb" />
+    <Compile Include="GestionComercial\MetaComercialAsesor.vb" />
+    <Compile Include="GestionComercial\MetaComercialAsesorColeccion.vb" />
+    <Compile Include="GestionComercial\MetaComercialBase.vb" />
+    <Compile Include="GestionComercial\MetaComercialColeccion.vb" />
+    <Compile Include="GestionComercial\NovedadPorServicio.vb" />
+    <Compile Include="GestionComercial\NovedadPorServicioColeccion.vb" />
+    <Compile Include="GestionComercial\NovedadReportePresupuestoGestionesVenta.vb" />
+    <Compile Include="GestionComercial\NovedadReportePresupuestoGestionesVentaColeccion.vb" />
+    <Compile Include="GestionComercial\ObtenerIdCliente.vb" />
+    <Compile Include="GestionComercial\ObtenerInfoVentasPorCliente.vb" />
+    <Compile Include="GestionComercial\PlanoClienteFinal.vb" />
+    <Compile Include="GestionComercial\PlanoClienteFinalColeccion.vb" />
+    <Compile Include="GestionComercial\PresupuestoDeGestionesDeVenta.vb" />
+    <Compile Include="GestionComercial\DetallePresupuestoDeGestionesDeVenta.vb" />
+    <Compile Include="GestionComercial\ProductoCampania.vb" />
+    <Compile Include="GestionComercial\ProductoCampaniaColeccion.vb" />
+    <Compile Include="GestionComercial\RadicarDocumentos.vb" />
+    <Compile Include="GestionComercial\RegistrarDocumentoDigitalizado.vb" />
+    <Compile Include="GestionComercial\RegistrarInfoDestruccion.vb" />
+    <Compile Include="GestionComercial\ReporteExtendidoLegalizacion.vb" />
+    <Compile Include="GestionComercial\ResultadoProcesoTipoVenta.vb" />
+    <Compile Include="GestionComercial\ResultadoProcesoTipoVentaColeccion.vb" />
+    <Compile Include="GestionComercial\ResultadoProcesoVenta.vb" />
+    <Compile Include="GestionComercial\ResultadoProcesoVentaColeccion.vb" />
+    <Compile Include="GestionComercial\SerialesADestruir.vb" />
+    <Compile Include="GestionComercial\ServicioCampania.vb" />
+    <Compile Include="GestionComercial\ServicioCampaniaColeccion.vb" />
+    <Compile Include="GestionComercial\TipoDeNovedad.vb" />
+    <Compile Include="GestionComercial\TipoDeNovedadColeccion.vb" />
+    <Compile Include="GestionComercial\TipoDeVenta.vb" />
+    <Compile Include="GestionComercial\TipoDeVentaColeccion.vb" />
+    <Compile Include="GestionComercial\TransaccionCliente.vb" />
+    <Compile Include="GestionComercial\TrasladarBodega.vb" />
+    <Compile Include="GestionComercial\VentasConNovedadGeneral.vb" />
+    <Compile Include="GestionComercial\VentasMasivo.vb" />
+    <Compile Include="GestionGuias\Guias.vb" />
+    <Compile Include="GestionGuias\GuiasColeccion.vb" />
+    <Compile Include="HerramientasBL.vb" />
+    <Compile Include="Localizacion\Ciudad.vb" />
+    <Compile Include="Localizacion\CiudadColeccion.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Productos\Documento.vb" />
+    <Compile Include="Productos\DocumentoColeccion.vb" />
+    <Compile Include="Productos\Producto.vb" />
+    <Compile Include="Productos\ProductoColeccion.vb" />
+    <Compile Include="Productos\Subproducto.vb" />
+    <Compile Include="Productos\SubproductoColeccion.vb" />
+    <Compile Include="Productos\TipoProducto.vb" />
+    <Compile Include="Productos\TipoProductoColeccion.vb" />
+    <Compile Include="RecursoHumano\AsesorComercial.vb" />
+    <Compile Include="RecursoHumano\AsesorComercialColeccion.vb" />
+    <Compile Include="RecursoHumano\PersonaBase.vb" />
+    <Compile Include="RecursoHumano\PersonalDePuntoDeVenta.vb" />
+    <Compile Include="RecursoHumano\RolSistema.vb" />
+    <Compile Include="RecursoHumano\SupervisorComercial.vb" />
+    <Compile Include="RecursoHumano\SupervisorComercialColeccion.vb" />
+    <Compile Include="ReporteOnline\Canal.vb" />
+    <Compile Include="ReporteOnline\CanalColeccion.vb" />
+    <Compile Include="ReporteOnline\Cumplimiento.vb" />
+    <Compile Include="ReporteOnline\CumplimientoColeccion.vb" />
+    <Compile Include="ReporteOnline\EstrategiaComercial.vb" />
+    <Compile Include="ReporteOnline\EstrategiaComercialColeccion.vb" />
+    <Compile Include="ReporteOnline\EstrategiaYPdvPorMeta.vb" />
+    <Compile Include="ReporteOnline\EstrategiaYPdvPorMetaColeccion.vb" />
+    <Compile Include="ReporteOnline\FiltroCanal.vb" />
+    <Compile Include="ReporteOnline\FiltroCanalColeccion.vb" />
+    <Compile Include="ReporteOnline\ListadoEstrategiaRegistro.vb" />
+    <Compile Include="ReporteOnline\ListadoEstrategiaRegistroColeccion.vb" />
+    <Compile Include="ReporteOnline\ListadoPdv.vb" />
+    <Compile Include="ReporteOnline\ListadoPdvColeccion.vb" />
+    <Compile Include="ReporteOnline\ListadoTipoProductoRegistro.vb" />
+    <Compile Include="ReporteOnline\ListadoTipoProductoRegistroColeccion.vb" />
+    <Compile Include="ReporteOnline\MetaComercialAsesor.vb" />
+    <Compile Include="ReporteOnline\MetaComercialAsesorColeccion.vb" />
+    <Compile Include="ReporteOnline\MetaComercialPorAsesorColeccion.vb" />
+    <Compile Include="ReporteOnline\NovedadServicio.vb" />
+    <Compile Include="ReporteOnline\NovedadServicioColeccion.vb" />
+    <Compile Include="ReporteOnline\ObtenerIdEstrategia.vb" />
+    <Compile Include="ReporteOnline\PuntosDeVentaEC.vb" />
+    <Compile Include="ReporteOnline\PuntosDeVentaECColeccion.vb" />
+    <Compile Include="ReporteOnline\PuntosDeVentasPorEstrategia.vb" />
+    <Compile Include="ReporteOnline\PuntosDeVentasPorEstrategiaColeccion.vb" />
+    <Compile Include="ReporteOnline\RegistrarCumplimiento.vb" />
+    <Compile Include="ReporteOnline\RegistrarEstrategiaPorPdv.vb" />
+    <Compile Include="ReporteOnline\RegistrarMetaComercial.vb" />
+    <Compile Include="ReporteOnline\RegistrarMetaComercialAsesor.vb" />
+    <Compile Include="Reportes\ReporteCumplimientoMetas.vb" />
+    <Compile Include="Reportes\ReporteCumplimientoMetasPorAsesor.vb" />
+    <Compile Include="Reportes\ReporteDeCifras.vb" />
+    <Compile Include="Reportes\ReporteDePresupuestoDiarioDeGestiones.vb" />
+    <Compile Include="Reportes\ReporteDeReferidos.vb" />
+    <Compile Include="Reportes\ReporteGeneralDeVentas.vb" />
+    <Compile Include="Reportes\ReporteInventarioGerencia.vb" />
+    <Compile Include="Reportes\ReporteInventarioGerencial.vb" />
+    <Compile Include="Reportes\ReporteInventarioReferencia.vb" />
+    <Compile Include="Reportes\ReporteInventarioSerializado.vb" />
+    <Compile Include="Reportes\ReportePlanillaVentaSeguros.vb" />
+    <Compile Include="Reportes\ReportePresupuestoInterno.vb" />
+    <Compile Include="Reportes\ReporteRealceClienteExterno.vb" />
+    <Compile Include="Reportes\ReporteResultadoBaseClienteInterno.vb" />
+    <Compile Include="Reportes\ReporteVentasSerializado.vb" />
+    <Compile Include="TomaFisica\ListadoEstados.vb" />
+    <Compile Include="TomaFisica\ListadoEstadosColeccion.vb" />
+    <Compile Include="Web References\NotusIlsService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WMS\Bodega.vb" />
+    <Compile Include="WMS\BodegaBase.vb" />
+    <Compile Include="WMS\BodegaColeccion.vb" />
+    <Compile Include="WMS\CargueMasivodeSeriales.vb" />
+    <Compile Include="WMS\CausalGenerica.vb" />
+    <Compile Include="WMS\CausalGenericaColeccion.vb" />
+    <Compile Include="WMS\DetalleSerialOrdenInventarioFisico.vb" />
+    <Compile Include="WMS\EstadosExternos.vb" />
+    <Compile Include="WMS\EstadosExternosColeccion.vb" />
+    <Compile Include="WMS\NovedadCausal.vb" />
+    <Compile Include="WMS\NovedadCausalColeccion.vb" />
+    <Compile Include="WMS\ObtenerListadoDocumentosRadicar.vb" />
+    <Compile Include="WMS\OrdenInventarioFisico.vb" />
+    <Compile Include="WMS\OrdenInventarioFisicoColeccion.vb" />
+    <Compile Include="WMS\PuntoDeVenta.vb" />
+    <Compile Include="WMS\PuntoDeVentaColeccion.vb" />
+    <Compile Include="WMS\RutaArchivoPoliza.vb" />
+    <Compile Include="WMS\ValorPrimaServicio.vb" />
+    <Compile Include="WMS\ValorPrimaServicioColeccion.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\System.Data.DataSet.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\NotusIlsService\NotusIlsService.wsdl" />
+    <None Include="Web References\NotusIlsService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\NotusIlsService\ResultadoProceso.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\LibreriasClase\CodigoFuente\Base\EncryptionClassLibrary\EncryptionClassLibrary\EncryptionClassLibrary.vbproj">
+      <Project>{693142d6-c97b-42f8-80f8-4481b5be652f}</Project>
+      <Name>EncryptionClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\LibreriasClase\CodigoFuente\Base\LMDataAccessLayer\LMDataAccessLayer.vbproj">
+      <Project>{0efbdbdb-3186-4e90-b167-f794d9f6d1db}</Project>
+      <Name>LMDataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\LibreriasClase\CodigoFuente\Base\LMMailSenderLibrary\LMMailSenderLibrary\LMMailSenderLibrary.vbproj">
+      <Project>{31eed092-6e89-4677-b409-24e299f778f5}</Project>
+      <Name>LMMailSenderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\LibreriasClase\CodigoFuente\Base\NotificacionEventos\NotificacionEventos\NotificacionEventos.vbproj">
+      <Project>{2516debc-a744-46d7-a89b-a86ce73f92ac}</Project>
+      <Name>NotificacionEventos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://appscde.logytechmobile.com/NotusCEmFinWS/WebService/NotusIlsService.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\NotusIlsService\</RelPath>
+      <UpdateFromURL>https://appscde.logytechmobile.com/NotusCEmFinWS/WebService/NotusIlsService.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NotusExpressBusinessLayer_NotusIlsService_NotusIlsService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

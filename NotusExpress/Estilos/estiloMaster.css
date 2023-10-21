@@ -1,0 +1,195 @@
+﻿
+body
+{
+	background-position: #F8F8F8 url(img/degradado.jpg) repeat-x;
+	font-family: Verdana, Arial;
+	background: #F8F8F8 url(img/degradado.jpg) repeat-x;
+}
+/**
+	 *	Basic Layout Theme*/
+.ui-layout-pane
+{
+	/* all 'panes' */
+	border: 1px solid #BBB;
+}
+.ui-layout-pane-center
+{
+	/* IFRAME pane */
+	padding: 0;
+	margin: 0;
+}
+.ui-layout-pane-west
+{
+	/* west pane */
+	padding: 0;
+	background-color: #fff !important;
+	overflow: auto;
+}
+
+.ui-layout-pane-north
+{
+	/* west pane */
+	background-color: #F6F5F5 !important;
+	border-bottom-color: #CC0000;
+	border-bottom-width: 3px;
+}
+
+.ui-layout-resizer
+{
+	/* all 'resizer-bars' */
+	background: #DDD;
+}
+.ui-layout-resizer-open:hover
+{
+	/* mouse-over */
+	background-position: #F3BD1C;
+	background: #FBE8AC;
+}
+
+.ui-layout-toggler
+{
+	/* all 'toggler-buttons' */
+	background: #AAA;
+}
+.ui-layout-toggler-closed
+{
+	/* closed toggler-button */
+	background: #CCC;
+	border-bottom: 1px solid #BBB;
+}
+.ui-layout-toggler .content
+{
+	/* toggler-text */
+	font: 14px bold Verdana, Verdana, Arial, Helvetica, sans-serif;
+}
+.ui-layout-toggler:hover
+{
+	/* mouse-over */
+	background: #DCA;
+}
+.ui-layout-toggler:hover .content
+{
+	/* mouse-over */
+	color: #009;
+}
+
+/* links */
+a, a:visited
+{
+	text-decoration: none;
+	background: inherit;
+	color: #A32035 !important;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+a:hover
+{
+	text-decoration: underline;
+	background: inherit;
+	color: #FF9900 !important;
+}
+
+/* headers */
+
+h1
+{
+	font-size: 180%;
+	font-weight: normal;
+	color: #555;
+}
+h2
+{
+	font-size: 160%;
+	color: #88ac0b;
+	font-weight: normal;
+}
+h3
+{
+	font-size: 130%;
+	color: #666666;
+}
+
+
+
+ul
+{
+	/* basic menu styling */
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+li
+{
+	margin: 0;
+	padding: 0;
+	margin: 0.5ex 0 0.5ex 1.2em;
+}
+
+.right
+{
+	float: right;
+	margin-left: 100px;
+}
+.left
+{
+	float: left;
+	margin-right: 50px;
+}
+/* footer */
+#footer
+{
+	font-size: 0.9em;
+	border-top: 1px solid #E6E6E6;
+	background: #F6F6F6;
+	color: #888;
+}
+#footer .right
+{
+	font-size: 0.9em;
+}
+#footer .right, .right a
+{
+	color: #888;
+}
+#footer .right a
+{
+	text-decoration: none;
+}
+#footer .right a:hover
+{
+	color: #000;
+}
+.error ul
+{
+	list-style-image: url('../img/exclamation.png');
+	list-style-type: square;
+}
+
+.error
+{
+	color: #FF0000;
+	background-color: #FFFFCC;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+.options li
+{
+	display: inline;
+	list-style-type: none;
+	padding-right: 20px;
+	float: left;
+}
+
+#Header
+{
+	height: 95px;
+	background-position: left;
+	background-image: url('../img/headerBack.jpg');
+	background-color: #F6F5F5 !important;
+	
+}

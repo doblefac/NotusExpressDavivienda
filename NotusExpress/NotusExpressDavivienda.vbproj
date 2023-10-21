@@ -1,0 +1,1187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9EFFE54E-7E24-4242-82B2-D16F2ACB54DD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NotusExpress</RootNamespace>
+    <AssemblyName>NotusExpress</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>%24/NotusExpressDavivienda/CodigoFuente/Pro/NotusExpressDavivienda/NotusExpress</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://desarrollologytechmobile.visualstudio.com</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>NotusExpress.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Optimize>false</Optimize>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>NotusExpress.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\..\..\..\LibreriasClase\CodigoFuente\Base\UtilidadesDDL\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v18.1.Core, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v18.1.Core, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v18.1.Core, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.1.Export, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxScheduler.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1.Web, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v18.1.Core, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v18.1.Core, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1.Extensions, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.Resources.v18.1, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1.Web.WebForms, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1.Web, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v18.1.Core, Version=18.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EO.Web">
+      <HintPath>..\..\..\..\..\LibreriasClase\CodigoFuente\Base\UtilidadesDDL\EO.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Spreadsheet">
+      <HintPath>..\..\..\..\..\LibreriasClase\CodigoFuente\Base\UtilidadesDDL\GemBox.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Idunno.AntiCSRF">
+      <HintPath>..\..\..\..\..\LibreriasClase\CodigoFuente\Base\UtilidadesDDL\Idunno.AntiCSRF.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Conversion.v3.5">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="office">
+      <HintPath>..\..\..\..\..\LibreriasClase\CodigoFuente\Base\UtilidadesDDL\office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Administracion\Default.aspx" />
+    <Content Include="Administracion\Index.aspx" />
+    <Content Include="BackOffice\BuscarGestionDeVenta.aspx" />
+    <Content Include="BackOffice\GestionDeVentaBackOffice.aspx" />
+    <Content Include="BackOffice\RegistroDePresupuestoDiarioDeGestiones.aspx" />
+    <Content Include="ControlDeUsuarios\LoginLm.ascx" />
+    <Content Include="ControlesDeUsuario\DateRange\agenda.js" />
+    <Content Include="ControlesDeUsuario\DateRange\arrowl.gif" />
+    <Content Include="ControlesDeUsuario\DateRange\arrowr.gif" />
+    <Content Include="ControlesDeUsuario\DateRange\bigCross.gif" />
+    <Content Include="ControlesDeUsuario\DateRange\calbtn.gif" />
+    <Content Include="ControlesDeUsuario\DateRange\contrast.css" />
+    <Content Include="ControlesDeUsuario\DateRange\contrast.js" />
+    <Content Include="ControlesDeUsuario\DateRange\ipopeng.htm" />
+    <Content Include="ControlesDeUsuario\DateRange\normal.css" />
+    <Content Include="ControlesDeUsuario\DateRange\normal.js" />
+    <Content Include="ControlesDeUsuario\DateRange\plugins.js" />
+    <Content Include="ControlesDeUsuario\EncabezadoPagina.ascx" />
+    <Content Include="ControlesDeUsuario\Loader.ascx" />
+    <Content Include="ControlesDeUsuario\MensajePopUp.ascx" />
+    <Content Include="ControlesDeUsuario\ModalProgress.ascx" />
+    <Content Include="ControlesDeUsuario\SelectorDireccion.ascx" />
+    <Content Include="ControlesDeUsuario\ValidacionURL.ascx" />
+    <Content Include="Errores\ErrorGeneral.aspx" />
+    <Content Include="Errores\PaginaNoEncontrada.aspx" />
+    <Content Include="Estilos\Errores.css" />
+    <Content Include="Estilos\EstiloAutocomplete.css" />
+    <Content Include="Estilos\estiloContenidos.css" />
+    <Content Include="Estilos\estiloMaster.css" />
+    <Content Include="Estilos\StyleAlert.css" />
+    <Content Include="GestionComercial\AdminInformacionClienteFinalVenta.aspx" />
+    <Content Include="GestionComercial\AdministracionCampaniaFinanciero.aspx" />
+    <Content Include="GestionComercial\AdministracionClientes.aspx" />
+    <Content Include="GestionComercial\AdministracionTipificacionNovedades.aspx" />
+    <Content Include="GestionComercial\AdministrarCanales.aspx" />
+    <Content Include="GestionComercial\AdministrarCumplimiento.aspx" />
+    <Content Include="GestionComercial\AdministrarEstrategiasComerciales.aspx" />
+    <Content Include="GestionComercial\AdministrarIndicadoresDeCumplimiento.aspx" />
+    <Content Include="GestionComercial\AdministrarMetasAsesor.aspx" />
+    <Content Include="GestionComercial\AdministrarMetasComerciales.aspx" />
+    <Content Include="GestionComercial\Archivos\EjemploMaestroCliente.xlsx" />
+    <Content Include="GestionComercial\Archivos\PlantillaXml.xml" />
+    <Content Include="GestionComercial\BusquedaGeneralVentas.aspx" />
+    <Content Include="GestionComercial\BusquedaGestionesCallCenter.aspx" />
+    <Content Include="GestionComercial\BusquedaGestionesNoEfectivasCallCenter.aspx" />
+    <Content Include="GestionComercial\CambioMasivoAsesor.aspx" />
+    <Content Include="GestionComercial\ConsultaAgendamiento.aspx" />
+    <Content Include="GestionComercial\ConsultaVentaPresencial.aspx" />
+    <Content Include="GestionComercial\DashboardGestionVenta.aspx" />
+    <Content Include="GestionComercial\DescargaDocumento.aspx" />
+    <Content Include="GestionComercial\DescargueManual.aspx" />
+    <Content Include="GestionComercial\EditarCampaniaFinanciero.aspx" />
+    <Content Include="GestionComercial\GestionAgendamiento.aspx" />
+    <Content Include="GestionComercial\GestionDeVenta.aspx" />
+    <Content Include="GestionComercial\GestionNovedades.aspx" />
+    <Content Include="GestionComercial\GestionVentaYServicio.aspx" />
+    <Content Include="GestionComercial\ImportarVentas.aspx" />
+    <Content Include="GestionComercial\RadicacionDocumentos.aspx" />
+    <Content Include="GestionComercial\RecepcionDocumentosDigitalizados.aspx" />
+    <Content Include="GestionComercial\RegistrarTarjetaDestruido.aspx" />
+    <Content Include="GestionComercial\RegistroDeReferidos.aspx" />
+    <Content Include="GestionComercial\Reportes\VisorPlanillaRadicacion.aspx" />
+    <Content Include="GestionComercial\Reportes\VisorXtraReport.aspx" />
+    <Content Include="GestionComercial\scripts\GestionVentaYServicio.js" />
+    <Content Include="Global.asax" />
+    <Content Include="img\active.png" />
+    <Content Include="img\add.png" />
+    <Content Include="img\agregarUsuario.png" />
+    <Content Include="img\am.jpg" />
+    <Content Include="img\applications.png" />
+    <Content Include="img\application_form.png" />
+    <Content Include="img\arrow-stop.png" />
+    <Content Include="img\arrow-turn.png" />
+    <Content Include="img\arrow_back.png" />
+    <Content Include="img\arrow_down2.gif" />
+    <Content Include="img\arrow_up2.gif" />
+    <Content Include="img\Attach.gif" />
+    <Content Include="img\back.png" />
+    <Content Include="img\BallBlue.png" />
+    <Content Include="img\BallGray.png" />
+    <Content Include="img\BallGreen.png" />
+    <Content Include="img\balloon_exclamation.png" />
+    <Content Include="img\BallOrange.png" />
+    <Content Include="img\BallRed.png" />
+    <Content Include="img\baloons_small.png" />
+    <Content Include="img\blockarrow.png" />
+    <Content Include="img\calendar.png" />
+    <Content Include="img\calendar2.png" />
+    <Content Include="img\CalendarDB.png" />
+    <Content Include="img\calendargreen.png" />
+    <Content Include="img\calendargreen2.png" />
+    <Content Include="img\cancelar.png" />
+    <Content Include="img\clip.png" />
+    <Content Include="img\clock.png" />
+    <Content Include="img\close.png" />
+    <Content Include="img\contraer.png" />
+    <Content Include="img\contrasena.png" />
+    <Content Include="img\cross.png" />
+    <Content Include="img\DateTime.png" />
+    <Content Include="img\degradado.jpg" />
+    <Content Include="img\degradado.png" />
+    <Content Include="img\degradado2.png" />
+    <Content Include="img\degradado3.png" />
+    <Content Include="img\documents_stack.png" />
+    <Content Include="img\door-open-out.png" />
+    <Content Include="img\Download.png" />
+    <Content Include="img\DxAdd16.png" />
+    <Content Include="img\DxAdd32.png" />
+    <Content Include="img\DxCancel32.png" />
+    <Content Include="img\DxConfirm16.png" />
+    <Content Include="img\DxConfirm32.png" />
+    <Content Include="img\DxEdit.png" />
+    <Content Include="img\DXEraser16.png" />
+    <Content Include="img\DXEraser32.png" />
+    <Content Include="img\DxFileUpload32.png" />
+    <Content Include="img\DxFilter16.png" />
+    <Content Include="img\DxFilter32.png" />
+    <Content Include="img\DxMarker.png" />
+    <Content Include="img\DxNewProcess.png" />
+    <Content Include="img\DxNote.png" />
+    <Content Include="img\DxPdf.png" />
+    <Content Include="img\DxPdf32.png" />
+    <Content Include="img\DxPikingList.png" />
+    <Content Include="img\DxSearch16.png" />
+    <Content Include="img\DxSuperMarket.png" />
+    <Content Include="img\edit-clear.png" />
+    <Content Include="img\Edit-User.png" />
+    <Content Include="img\edit.gif" />
+    <Content Include="img\editCerrado.gif" />
+    <Content Include="img\EjemploCargueSeriales.JPG" />
+    <Content Include="img\eliminar.gif" />
+    <Content Include="img\eraser.png" />
+    <Content Include="img\eraserminus.gif" />
+    <Content Include="img\eraserminus.png" />
+    <Content Include="img\error.png" />
+    <Content Include="img\Excel.gif" />
+    <Content Include="img\exclamation.png" />
+    <Content Include="img\expandir.png" />
+    <Content Include="img\find.gif" />
+    <Content Include="img\find.png" />
+    <Content Include="img\form.png" />
+    <Content Include="img\funnel.png" />
+    <Content Include="img\headerBack.jpg" />
+    <Content Include="img\headerBack2.jpg" />
+    <Content Include="img\header_eurus.jpg" />
+    <Content Include="img\home.png" />
+    <Content Include="img\home_red.png" />
+    <Content Include="img\House_Sale.png" />
+    <Content Include="img\icon_comment.gif" />
+    <Content Include="img\input_submit.gif" />
+    <Content Include="img\List.png" />
+    <Content Include="img\list_num.png" />
+    <Content Include="img\loading_green.gif" />
+    <Content Include="img\lock.png" />
+    <Content Include="img\login_new.png" />
+    <Content Include="img\logoEmpresa.gif" />
+    <Content Include="img\LogoHome.png" />
+    <Content Include="img\logoLM_Small.jpg" />
+    <Content Include="img\minus.png" />
+    <Content Include="img\module_file_format.png" />
+    <Content Include="img\modulo.png" />
+    <Content Include="img\MSExcel.png" />
+    <Content Include="img\new.png" />
+    <Content Include="img\NewProcess.png" />
+    <Content Include="img\ok.png" />
+    <Content Include="img\old-go-top.png" />
+    <Content Include="img\package.png" />
+    <Content Include="img\pageFirst.gif" />
+    <Content Include="img\pageLast.gif" />
+    <Content Include="img\pageNext.gif" />
+    <Content Include="img\pagePrev.gif" />
+    <Content Include="img\pdf.png" />
+    <Content Include="img\phone_exclamation.png" />
+    <Content Include="img\phone_sound.png" />
+    <Content Include="img\pm.jpg" />
+    <Content Include="img\procesar1.gif" />
+    <Content Include="img\progress.gif" />
+    <Content Include="img\progress_red.gif" />
+    <Content Include="img\pull.gif" />
+    <Content Include="img\quote.gif" />
+    <Content Include="img\ReimprimirPDF.png" />
+    <Content Include="img\report.png" />
+    <Content Include="img\reports.png" />
+    <Content Include="img\Running_process.png" />
+    <Content Include="img\save_all.png" />
+    <Content Include="img\search.png" />
+    <Content Include="img\structure.png" />
+    <Content Include="img\subfolder.png" />
+    <Content Include="img\subfolder_small.png" />
+    <Content Include="img\tbllogin_botomborder.png" />
+    <Content Include="img\tbllogin_botomleft.png" />
+    <Content Include="img\tbllogin_botomright.png" />
+    <Content Include="img\tbllogin_left.png" />
+    <Content Include="img\tbllogin_leftborder.png" />
+    <Content Include="img\tbllogin_right.png" />
+    <Content Include="img\tbllogin_rightborder.png" />
+    <Content Include="img\tbllogin_topborder.png" />
+    <Content Include="img\text.gif" />
+    <Content Include="img\Truck.png" />
+    <Content Include="img\Truck32.png" />
+    <Content Include="img\unfunnel.png" />
+    <Content Include="img\update.gif" />
+    <Content Include="img\Update.png" />
+    <Content Include="img\Upload.png" />
+    <Content Include="img\venta.jpg" />
+    <Content Include="img\venta1.jpg" />
+    <Content Include="img\ver.png" />
+    <Content Include="img\ver_detalle.png" />
+    <Content Include="img\viewkl_left_right.png" />
+    <Content Include="img\view_left_right.png" />
+    <Content Include="img\warning_big.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="ReportesCliente\ReporteDeCifrasCliente.aspx" />
+    <Content Include="ReportesCliente\ReporteDeCumplimientoDeMetasPorAsesor.aspx" />
+    <Content Include="ReportesCliente\ReporteDeEvaluacionDeCumplimientoMetas.aspx" />
+    <Content Include="ReportesCliente\ReporteInventarioGerencia.aspx" />
+    <Content Include="ReportesCliente\ReporteInventarioReferencia.aspx" />
+    <Content Include="ReportesCliente\ReporteInventarioSerializado.aspx" />
+    <Content Include="ReportesCliente\ReportePresupuestoDiarioDeGestiones.aspx" />
+    <Content Include="ReportesCliente\ReporteVentasSerializado.aspx" />
+    <Content Include="Reportes\ReporteGestionVentasCallCenter.aspx" />
+    <Content Include="Reportes\ReportePlanillaVentaSeguros.aspx" />
+    <Content Include="Reportes\ReportePresupuestoInterno.aspx" />
+    <Content Include="Reportes\ReporteRealceClienteExterno.aspx" />
+    <Content Include="Reportes\ReporteResultadoBaseClienteInterno.aspx" />
+    <Content Include="Scripts\FuncionesJS.js" />
+    <Content Include="Scripts\HerramientasPresentacion.js" />
+    <Content Include="Scripts\HGridScript.js" />
+    <Content Include="Scripts\jquery-1.12.1-ui.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-1.3.2-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.3.2.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jscript_ventana.js" />
+    <Content Include="Scripts\ScriptAlert.js" />
+    <Content Include="Scripts\UIlayout\jquery.js" />
+    <Content Include="Scripts\UIlayout\jquery.layout.js" />
+    <Content Include="Scripts\UIlayout\jquery.ui.all.js" />
+    <Content Include="Usuarios\AdministradorUsuariosPdv.aspx" />
+    <Content Include="Usuarios\ConsultadeUsuarios.aspx" />
+    <Content Include="Usuarios\CreacionUsuario.aspx" />
+    <Content Include="Usuarios\EdiciondeUsuario.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administracion\Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Index.aspx.designer.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Index.aspx.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\BuscarGestionDeVenta.aspx.designer.vb">
+      <DependentUpon>BuscarGestionDeVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\BuscarGestionDeVenta.aspx.vb">
+      <DependentUpon>BuscarGestionDeVenta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\GestionDeVentaBackOffice.aspx.designer.vb">
+      <DependentUpon>GestionDeVentaBackOffice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\GestionDeVentaBackOffice.aspx.vb">
+      <DependentUpon>GestionDeVentaBackOffice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\RegistroDePresupuestoDiarioDeGestiones.aspx.designer.vb">
+      <DependentUpon>RegistroDePresupuestoDiarioDeGestiones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\RegistroDePresupuestoDiarioDeGestiones.aspx.vb">
+      <DependentUpon>RegistroDePresupuestoDiarioDeGestiones.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ControlDeUsuarios\LoginLm.ascx.designer.vb">
+      <DependentUpon>LoginLm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlDeUsuarios\LoginLm.ascx.vb">
+      <DependentUpon>LoginLm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\EncabezadoPagina.ascx.designer.vb">
+      <DependentUpon>EncabezadoPagina.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\EncabezadoPagina.ascx.vb">
+      <DependentUpon>EncabezadoPagina.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\Loader.ascx.designer.vb">
+      <DependentUpon>Loader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\Loader.ascx.vb">
+      <DependentUpon>Loader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\MensajePopUp.ascx.designer.vb">
+      <DependentUpon>MensajePopUp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\MensajePopUp.ascx.vb">
+      <DependentUpon>MensajePopUp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\ModalProgress.ascx.designer.vb">
+      <DependentUpon>ModalProgress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\ModalProgress.ascx.vb">
+      <DependentUpon>ModalProgress.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\SelectorDireccion.ascx.designer.vb">
+      <DependentUpon>SelectorDireccion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\SelectorDireccion.ascx.vb">
+      <DependentUpon>SelectorDireccion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\ValidacionURL.ascx.designer.vb">
+      <DependentUpon>ValidacionURL.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\ValidacionURL.ascx.vb">
+      <DependentUpon>ValidacionURL.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Errores\ErrorGeneral.aspx.designer.vb">
+      <DependentUpon>ErrorGeneral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Errores\ErrorGeneral.aspx.vb">
+      <DependentUpon>ErrorGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Errores\PaginaNoEncontrada.aspx.designer.vb">
+      <DependentUpon>PaginaNoEncontrada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Errores\PaginaNoEncontrada.aspx.vb">
+      <DependentUpon>PaginaNoEncontrada.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Estructuras.vb" />
+    <Compile Include="GestionComercial\AdminInformacionClienteFinalVenta.aspx.designer.vb">
+      <DependentUpon>AdminInformacionClienteFinalVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\AdminInformacionClienteFinalVenta.aspx.vb">
+      <DependentUpon>AdminInformacionClienteFinalVenta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\AdministracionCampaniaFinanciero.aspx.designer.vb">
+      <DependentUpon>AdministracionCampaniaFinanciero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\AdministracionCampaniaFinanciero.aspx.vb">
+      <DependentUpon>AdministracionCampaniaFinanciero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\AdministracionClientes.aspx.designer.vb">
+      <DependentUpon>AdministracionClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\AdministracionClientes.aspx.vb">
+      <DependentUpon>AdministracionClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\AdministracionTipificacionNovedades.aspx.designer.vb">
+      <DependentUpon>AdministracionTipificacionNovedades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\AdministracionTipificacionNovedades.aspx.vb">
+      <DependentUpon>AdministracionTipificacionNovedades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\AdministrarCanales.aspx.designer.vb">
+      <DependentUpon>AdministrarCanales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\AdministrarCanales.aspx.vb">
+      <DependentUpon>AdministrarCanales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\AdministrarCumplimiento.aspx.designer.vb">
+      <DependentUpon>AdministrarCumplimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\AdministrarCumplimiento.aspx.vb">
+      <DependentUpon>AdministrarCumplimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\AdministrarEstrategiasComerciales.aspx.designer.vb">
+      <DependentUpon>AdministrarEstrategiasComerciales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\AdministrarEstrategiasComerciales.aspx.vb">
+      <DependentUpon>AdministrarEstrategiasComerciales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\AdministrarIndicadoresDeCumplimiento.aspx.designer.vb">
+      <DependentUpon>AdministrarIndicadoresDeCumplimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\AdministrarIndicadoresDeCumplimiento.aspx.vb">
+      <DependentUpon>AdministrarIndicadoresDeCumplimiento.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\AdministrarMetasAsesor.aspx.designer.vb">
+      <DependentUpon>AdministrarMetasAsesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\AdministrarMetasAsesor.aspx.vb">
+      <DependentUpon>AdministrarMetasAsesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\AdministrarMetasComerciales.aspx.designer.vb">
+      <DependentUpon>AdministrarMetasComerciales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\AdministrarMetasComerciales.aspx.vb">
+      <DependentUpon>AdministrarMetasComerciales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\BusquedaGeneralVentas.aspx.designer.vb">
+      <DependentUpon>BusquedaGeneralVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\BusquedaGeneralVentas.aspx.vb">
+      <DependentUpon>BusquedaGeneralVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\BusquedaGestionesCallCenter.aspx.designer.vb">
+      <DependentUpon>BusquedaGestionesCallCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\BusquedaGestionesCallCenter.aspx.vb">
+      <DependentUpon>BusquedaGestionesCallCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\BusquedaGestionesNoEfectivasCallCenter.aspx.designer.vb">
+      <DependentUpon>BusquedaGestionesNoEfectivasCallCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\BusquedaGestionesNoEfectivasCallCenter.aspx.vb">
+      <DependentUpon>BusquedaGestionesNoEfectivasCallCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\CambioMasivoAsesor.aspx.designer.vb">
+      <DependentUpon>CambioMasivoAsesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\CambioMasivoAsesor.aspx.vb">
+      <DependentUpon>CambioMasivoAsesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\ConsultaAgendamiento.aspx.designer.vb">
+      <DependentUpon>ConsultaAgendamiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\ConsultaAgendamiento.aspx.vb">
+      <DependentUpon>ConsultaAgendamiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\ConsultaVentaPresencial.aspx.designer.vb">
+      <DependentUpon>ConsultaVentaPresencial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\ConsultaVentaPresencial.aspx.vb">
+      <DependentUpon>ConsultaVentaPresencial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\DashboardGestionVenta.aspx.designer.vb">
+      <DependentUpon>DashboardGestionVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\DashboardGestionVenta.aspx.vb">
+      <DependentUpon>DashboardGestionVenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\DescargaDocumento.aspx.designer.vb">
+      <DependentUpon>DescargaDocumento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\DescargaDocumento.aspx.vb">
+      <DependentUpon>DescargaDocumento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\DescargueManual.aspx.designer.vb">
+      <DependentUpon>DescargueManual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\DescargueManual.aspx.vb">
+      <DependentUpon>DescargueManual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\EditarCampaniaFinanciero.aspx.designer.vb">
+      <DependentUpon>EditarCampaniaFinanciero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\EditarCampaniaFinanciero.aspx.vb">
+      <DependentUpon>EditarCampaniaFinanciero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\GestionAgendamiento.aspx.designer.vb">
+      <DependentUpon>GestionAgendamiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\GestionAgendamiento.aspx.vb">
+      <DependentUpon>GestionAgendamiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\GestionDeVenta.aspx.designer.vb">
+      <DependentUpon>GestionDeVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\GestionDeVenta.aspx.vb">
+      <DependentUpon>GestionDeVenta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\GestionNovedades.aspx.designer.vb">
+      <DependentUpon>GestionNovedades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\GestionNovedades.aspx.vb">
+      <DependentUpon>GestionNovedades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\GestionVentaYServicio.aspx.designer.vb">
+      <DependentUpon>GestionVentaYServicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\GestionVentaYServicio.aspx.vb">
+      <DependentUpon>GestionVentaYServicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\ImportarVentas.aspx.designer.vb">
+      <DependentUpon>ImportarVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\ImportarVentas.aspx.vb">
+      <DependentUpon>ImportarVentas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\RadicacionDocumentos.aspx.designer.vb">
+      <DependentUpon>RadicacionDocumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\RadicacionDocumentos.aspx.vb">
+      <DependentUpon>RadicacionDocumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\RecepcionDocumentosDigitalizados.aspx.designer.vb">
+      <DependentUpon>RecepcionDocumentosDigitalizados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\RecepcionDocumentosDigitalizados.aspx.vb">
+      <DependentUpon>RecepcionDocumentosDigitalizados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\RegistrarTarjetaDestruido.aspx.designer.vb">
+      <DependentUpon>RegistrarTarjetaDestruido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\RegistrarTarjetaDestruido.aspx.vb">
+      <DependentUpon>RegistrarTarjetaDestruido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\RegistroDeReferidos.aspx.designer.vb">
+      <DependentUpon>RegistroDeReferidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\RegistroDeReferidos.aspx.vb">
+      <DependentUpon>RegistroDeReferidos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\Reportes\VisorPlanillaRadicacion.aspx.designer.vb">
+      <DependentUpon>VisorPlanillaRadicacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\Reportes\VisorPlanillaRadicacion.aspx.vb">
+      <DependentUpon>VisorPlanillaRadicacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionComercial\Reportes\VisorXtraReport.aspx.designer.vb">
+      <DependentUpon>VisorXtraReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComercial\Reportes\VisorXtraReport.aspx.vb">
+      <DependentUpon>VisorXtraReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\DescargarDocumento.ashx.vb">
+      <DependentUpon>DescargarDocumento.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesCliente\ReporteDeCifrasCliente.aspx.designer.vb">
+      <DependentUpon>ReporteDeCifrasCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesCliente\ReporteDeCifrasCliente.aspx.vb">
+      <DependentUpon>ReporteDeCifrasCliente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReportesCliente\ReporteDeCumplimientoDeMetasPorAsesor.aspx.designer.vb">
+      <DependentUpon>ReporteDeCumplimientoDeMetasPorAsesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesCliente\ReporteDeCumplimientoDeMetasPorAsesor.aspx.vb">
+      <DependentUpon>ReporteDeCumplimientoDeMetasPorAsesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportesCliente\ReporteDeEvaluacionDeCumplimientoMetas.aspx.designer.vb">
+      <DependentUpon>ReporteDeEvaluacionDeCumplimientoMetas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesCliente\ReporteDeEvaluacionDeCumplimientoMetas.aspx.vb">
+      <DependentUpon>ReporteDeEvaluacionDeCumplimientoMetas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportesCliente\ReporteInventarioGerencia.aspx.designer.vb">
+      <DependentUpon>ReporteInventarioGerencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesCliente\ReporteInventarioGerencia.aspx.vb">
+      <DependentUpon>ReporteInventarioGerencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportesCliente\ReporteInventarioReferencia.aspx.designer.vb">
+      <DependentUpon>ReporteInventarioReferencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesCliente\ReporteInventarioReferencia.aspx.vb">
+      <DependentUpon>ReporteInventarioReferencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportesCliente\ReporteInventarioSerializado.aspx.designer.vb">
+      <DependentUpon>ReporteInventarioSerializado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesCliente\ReporteInventarioSerializado.aspx.vb">
+      <DependentUpon>ReporteInventarioSerializado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportesCliente\ReportePresupuestoDiarioDeGestiones.aspx.designer.vb">
+      <DependentUpon>ReportePresupuestoDiarioDeGestiones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesCliente\ReportePresupuestoDiarioDeGestiones.aspx.vb">
+      <DependentUpon>ReportePresupuestoDiarioDeGestiones.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReportesCliente\ReporteVentasSerializado.aspx.designer.vb">
+      <DependentUpon>ReporteVentasSerializado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesCliente\ReporteVentasSerializado.aspx.vb">
+      <DependentUpon>ReporteVentasSerializado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\ActaDestruccionSeriales.Designer.vb">
+      <DependentUpon>ActaDestruccionSeriales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ActaDestruccionSeriales.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\dsActaDestruccion.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsActaDestruccion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dsPlanillaRadicacion.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPlanillaRadicacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\PlanillaRadicacionReporte.Designer.vb">
+      <DependentUpon>PlanillaRadicacionReporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\PlanillaRadicacionReporte.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteGeneralGestionVentas.aspx.designer.vb">
+      <DependentUpon>ReporteGeneralGestionVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteGeneralGestionVentas.aspx.vb">
+      <DependentUpon>ReporteGeneralGestionVentas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Herramientas.vb" />
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reportes\ReporteGestionVentasCallCenter.aspx.designer.vb">
+      <DependentUpon>ReporteGestionVentasCallCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteGestionVentasCallCenter.aspx.vb">
+      <DependentUpon>ReporteGestionVentasCallCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReportePlanillaVentaSeguros.aspx.designer.vb">
+      <DependentUpon>ReportePlanillaVentaSeguros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReportePlanillaVentaSeguros.aspx.vb">
+      <DependentUpon>ReportePlanillaVentaSeguros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReportePresupuestoInterno.aspx.designer.vb">
+      <DependentUpon>ReportePresupuestoInterno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReportePresupuestoInterno.aspx.vb">
+      <DependentUpon>ReportePresupuestoInterno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteRealceClienteExterno.aspx.designer.vb">
+      <DependentUpon>ReporteRealceClienteExterno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteRealceClienteExterno.aspx.vb">
+      <DependentUpon>ReporteRealceClienteExterno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteReferidos.aspx.designer.vb">
+      <DependentUpon>ReporteReferidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteReferidos.aspx.vb">
+      <DependentUpon>ReporteReferidos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteResultadoBaseClienteInterno.aspx.designer.vb">
+      <DependentUpon>ReporteResultadoBaseClienteInterno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteResultadoBaseClienteInterno.aspx.vb">
+      <DependentUpon>ReporteResultadoBaseClienteInterno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seguridad.vb" />
+    <Compile Include="Usuarios\AdministradorUsuariosPdv.aspx.designer.vb">
+      <DependentUpon>AdministradorUsuariosPdv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\AdministradorUsuariosPdv.aspx.vb">
+      <DependentUpon>AdministradorUsuariosPdv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuarios\ConsultadeUsuarios.aspx.designer.vb">
+      <DependentUpon>ConsultadeUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\ConsultadeUsuarios.aspx.vb">
+      <DependentUpon>ConsultadeUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuarios\CreacionUsuario.aspx.designer.vb">
+      <DependentUpon>CreacionUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\CreacionUsuario.aspx.vb">
+      <DependentUpon>CreacionUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuarios\EdiciondeUsuario.aspx.designer.vb">
+      <DependentUpon>EdiciondeUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\EdiciondeUsuario.aspx.vb">
+      <DependentUpon>EdiciondeUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebService\Campania\WsRegistroCampania.vb" />
+    <Compile Include="WebService\GestionComercial\WsGestionVenta.vb" />
+    <Compile Include="WebService\NotusExpressService.asmx.vb">
+      <DependentUpon>NotusExpressService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WMS\CargueSerialesPorArchivo.aspx.designer.vb">
+      <DependentUpon>CargueSerialesPorArchivo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WMS\CargueSerialesPorArchivo.aspx.vb">
+      <DependentUpon>CargueSerialesPorArchivo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WMS\CrearOrdenInventarioFisico.aspx.designer.vb">
+      <DependentUpon>CrearOrdenInventarioFisico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WMS\CrearOrdenInventarioFisico.aspx.vb">
+      <DependentUpon>CrearOrdenInventarioFisico.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WMS\PoolOrdenesInventarioFisico.aspx.designer.vb">
+      <DependentUpon>PoolOrdenesInventarioFisico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WMS\PoolOrdenesInventarioFisico.aspx.vb">
+      <DependentUpon>PoolOrdenesInventarioFisico.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WMS\RegistrarDetalleDeInventarioFisico.aspx.designer.vb">
+      <DependentUpon>RegistrarDetalleDeInventarioFisico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WMS\RegistrarDetalleDeInventarioFisico.aspx.vb">
+      <DependentUpon>RegistrarDetalleDeInventarioFisico.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ActaDestruccionSeriales.resx">
+      <DependentUpon>ActaDestruccionSeriales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\PlanillaRadicacionReporte.resx">
+      <DependentUpon>PlanillaRadicacionReporte.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\continue.png" />
+    <Content Include="img\CSV.png" />
+    <Content Include="img\loader_dots.gif" />
+    <Content Include="img\xlsx_win.png" />
+    <Content Include="Reportes\ReporteGeneralGestionVentas.aspx" />
+    <Content Include="Reportes\ReporteReferidos.aspx" />
+    <Content Include="WebService\NotusExpressService.asmx" />
+    <Content Include="WMS\CargueSerialesPorArchivo.aspx" />
+    <Content Include="WMS\CrearOrdenInventarioFisico.aspx" />
+    <Content Include="WMS\PoolOrdenesInventarioFisico.aspx" />
+    <Content Include="WMS\RegistrarDetalleDeInventarioFisico.aspx" />
+    <Content Include="GestionComercial\Archivos\PlantillaCiudades.xlsx" />
+    <Content Include="GestionComercial\Archivos\EjemploActualizacionMasivaAsesor.xlsx" />
+    <Content Include="Handlers\DescargarDocumento.ashx" />
+    <Content Include="GestionComercial\Archivos\EjemploEntregaActivaciones.xlsx" />
+    <Content Include="GestionComercial\Archivos\FormatoSolicitudCreditoPN.pdf" />
+    <Content Include="eo_web.ashx" />
+    <Content Include="GestionComercial\Templates\DAVSolicitudCreditoPersonaNatural.pdf" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\CallProduccion.pubxml" />
+    <None Include="My Project\PublishProfiles\DemoNotusExpressCALL.pubxml" />
+    <None Include="My Project\PublishProfiles\PerfilLocal.pubxml" />
+    <None Include="My Project\PublishProfiles\PerfilProduccionDavivienda.pubxml" />
+    <None Include="My Project\PublishProfiles\ProduccionBRM.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Plantillas\PlantillaImporVentas.xlsx" />
+    <Content Include="Reportes\Archivos\Reporte Realce clientes.xlsx" />
+    <None Include="packages.config" />
+    <None Include="Reportes\dsActaDestruccion.xsc">
+      <DependentUpon>dsActaDestruccion.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\dsActaDestruccion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsActaDestruccion.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reportes\dsActaDestruccion.xss">
+      <DependentUpon>dsActaDestruccion.xsd</DependentUpon>
+    </None>
+    <Content Include="Reportes\dsPlanillaRadicacion.xsc">
+      <DependentUpon>dsPlanillaRadicacion.xsd</DependentUpon>
+    </Content>
+    <None Include="Reportes\dsPlanillaRadicacion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPlanillaRadicacion.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Reportes\dsPlanillaRadicacion.xss">
+      <DependentUpon>dsPlanillaRadicacion.xsd</DependentUpon>
+    </Content>
+    <Content Include="Reportes\Plantillas\DatosGuiaCargarMetasComercialesAsesor.xlsx" />
+    <None Include="Reportes\Plantillas\PlanillaReferidos.xlsx" />
+    <Content Include="Reportes\Plantillas\PlantillaDatosGuiaMetasComerciales.xlsx" />
+    <None Include="Reportes\Plantillas\PlantillaMetasComerciales.xlsx" />
+    <Content Include="Reportes\Plantillas\PlantillaMetasComercialesAsesor.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="ArchivosCargados\" />
+    <Folder Include="GestionComercial\ClientesCargados\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\LibreriasClase\CodigoFuente\Base\EncryptionClassLibrary\EncryptionClassLibrary\EncryptionClassLibrary.vbproj">
+      <Project>{693142d6-c97b-42f8-80f8-4481b5be652f}</Project>
+      <Name>EncryptionClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\LibreriasClase\CodigoFuente\Base\LMDataAccessLayer\LMDataAccessLayer.vbproj">
+      <Project>{0efbdbdb-3186-4e90-b167-f794d9f6d1db}</Project>
+      <Name>LMDataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\LibreriasClase\CodigoFuente\Base\NotificacionEventos\NotificacionEventos\NotificacionEventos.vbproj">
+      <Project>{2516debc-a744-46d7-a89b-a86ce73f92ac}</Project>
+      <Name>NotificacionEventos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\LoginLM\CodigoFuente\Base\LoginLM\LoginLm.Datos\LoginLm.Datos.vbproj">
+      <Project>{5b0b2e1a-a191-461a-a2e3-81cd02c821bc}</Project>
+      <Name>LoginLm.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\LoginLM\CodigoFuente\Base\LoginLM\LoginLmBusinessLayer\LoginLm.BusinessLayer.vbproj">
+      <Project>{c637af0f-4a48-4280-bab6-bc62e6158ab6}</Project>
+      <Name>LoginLm.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NotusExpressBusinessLayer\NotusExpressBusinessLayer.vbproj">
+      <Project>{fc7f844c-8506-4de5-96c3-120e31a6a74e}</Project>
+      <Name>NotusExpressBusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>NotusExpress.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>NotusExpress.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>NotusExpress.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>NotusExpress.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57432</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1053/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

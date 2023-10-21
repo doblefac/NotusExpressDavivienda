@@ -1,0 +1,516 @@
+<xfa:data xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+  <form1>
+    <encabezado xfa:dataNode="dataGroup" />
+    <fechadiligen>
+      <Numero-cliente>Candelaria</Numero-cliente>
+      <Numero-cliente>COD001</Numero-cliente>
+      <Numero-cliente>COD003</Numero-cliente>
+      <Numero-cliente>32C3</Numero-cliente>
+      <Numero-cliente>OFICINA PRINCIPAL</Numero-cliente>
+      <Numero-cliente />
+      <Numero-cliente />
+      <DateTimeField1>20/08/2019</DateTimeField1>
+      <Numero-cliente>32H5</Numero-cliente>
+      <TextField15>AG001</TextField15>
+    </fechadiligen>
+    <TITproductosasolicitar xfa:dataNode="dataGroup" />
+    <creditodeconsumo>
+      <Otro>0</Otro>
+      <Ndecuentadesemb />
+      <Plazomeses />
+      <cuposolic />
+      <RadioButtonList />
+      <TextField4>DINERS CLUB NEGRA, MASTERCARD PLATINUM, </TextField4>
+      <NumericField4>
+      </NumericField4>
+      <Nocertificadoasoc />
+      <Destino />
+      <FondoNo />
+      <MCNocertificadAso />
+    </creditodeconsumo>
+    <creditodevehiculo>
+      <RadioButtonList />
+      <TextField4 />
+      <TextField4 />
+      <RadioButtonList />
+      <TextField4 />
+      <TextField4 />
+      <TextField4 />
+      <NumericField1 />
+      <NumericField1 />
+      <RadioButtonList />
+      <cvcual />
+      <RadioButtonList />
+    </creditodevehiculo>
+    <creditohipotecario>
+      <a4>0</a4>
+      <a6>0</a6>
+      <a5>0</a5>
+      <a2>0</a2>
+      <a1>0</a1>
+      <a3>0</a3>
+      <hipnomcons />
+      <hipcreditconst />
+      <hipnombproy />
+      <Leasinghabitacional />
+      <leasingcobranza />
+      <NumericField6 />
+      <NumericField7 />
+      <NumericField8 />
+      <NumericField9 />
+      <NumericField10 />
+      <TextField17 />
+      <RadioButtonList />
+      <creditosolicitado />
+      <porcentaje1 />
+      <porcentaje2 />
+      <porcentaje3 />
+      <porcentaje4 />
+      <porcentaje />
+      <RadioButtonList />
+      <tipoinmcual />
+      <RadioButtonList />
+      <RadioButtonList />
+      <usoinmueble />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField4 />
+      <Hipotrocual />
+      <RadioButtonList />
+      <RadioButtonList />
+      <hipnomentidad />
+      <RadioButtonList />
+      <RadioButtonList />
+      <DateTimeField1 />
+    </creditohipotecario>
+    <infovendedorhipote>
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField4 />
+      <TextField1 />
+      <RadioButtonList />
+      <TextField4 />
+      <TextField1 />
+      <TextField1 />
+      <TextField4 />
+      <NumericField5 />
+      <TextField4 />
+      <TextField1 />
+    </infovendedorhipote>
+    <TITinfoprimersolicitante xfa:dataNode="dataGroup" />
+    <infobasicaPN>
+      <TextField1>FAIBER</TextField1>
+      <TextField1>LOSADA ZUÑIGATTTT</TextField1>
+      <TextField1>ZUNIGA</TextField1>
+      <DateTimeField1>
+      </DateTimeField1>
+      <TextField1 />
+      <TextField1 />
+      <DateTimeField1 />
+      <RadioButtonList>
+      </RadioButtonList>
+      <TextField1>
+      </TextField1>
+      <NumericField25 />
+      <RadioButtonList>
+      </RadioButtonList>
+      <RadioButtonList>M</RadioButtonList>
+      <RadioButtonList>1</RadioButtonList>
+    </infobasicaPN>
+    <localizacion>
+      <empleado1>2</empleado1>
+      <TextField1>
+      </TextField1>
+      <TextField1>
+      </TextField1>
+      <NumericField29>
+      </NumericField29>
+      <TextField1>
+      </TextField1>
+      <NumericField30>
+      </NumericField30>
+      <RadioButtonList>
+      </RadioButtonList>
+      <TextField1>
+      </TextField1>
+      <TextField1>
+      </TextField1>
+      <DateTimeField1>
+      </DateTimeField1>
+      <NumericField32>
+      </NumericField32>
+      <DateTimeField1>
+      </DateTimeField1>
+      <TextField1>
+      </TextField1>
+      <TextField1>CL 25 68 A 70 PRUEBA IT</TextField1>
+      <TextField1>Candelaria</TextField1>
+      <NumericField31>8022506</NumericField31>
+      <TextField1>
+      </TextField1>
+      <TextField1>Candelaria</TextField1>
+      <NumericField26>
+      </NumericField26>
+      <NumericField27 />
+      <TextField1>F2LOSADA@GMAL.COM</TextField1>
+      <NumericField28>3113425909</NumericField28>
+      <Vinculacion />
+    </localizacion>
+    <infofinanciera>
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <NumericField12 />
+      <RadioButtonList />
+      <RadioButtonList />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <NumericField36 />
+      <NumericField38 />
+      <NumericField37 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <NumericField15 />
+      <NumericField14 />
+      <NumericField13 />
+      <Vinculacion />
+      <TextField1 />
+      <NumericField13 />
+      <NumericField39 />
+      <TextField1 />
+      <TextField1>
+      </TextField1>
+      <TextField1>
+      </TextField1>
+      <TextField1>
+      </TextField1>
+      <NumericField33>
+      </NumericField33>
+      <NumericField34>
+      </NumericField34>
+      <NumericField35>
+      </NumericField35>
+      <TextField1>
+      </TextField1>
+      <TextField1>
+      </TextField1>
+      <TextField1>
+      </TextField1>
+      <TextField1>
+      </TextField1>
+      <TextField1>
+      </TextField1>
+      <TextField1>
+      </TextField1>
+      <TextField1>
+      </TextField1>
+      <NumericField23>
+      </NumericField23>
+      <otrosactivosvalor>
+      </otrosactivosvalor>
+      <TextField9>
+      </TextField9>
+      <NumericField7>
+      </NumericField7>
+      <TextField10>
+      </TextField10>
+      <NumericField24 />
+      <TextField1 />
+      <TextField4 />
+      <NumericField17 />
+      <TextField4 />
+      <TextField13 />
+      <NumericField8 />
+      <TextField1 />
+      <TextField4 />
+      <Vcomercial />
+      <TextField4 />
+      <TextField14 />
+      <NumericField8 />
+      <TextField1 />
+      <TextField4 />
+      <TextField1 />
+      <TextField4 />
+      <RadioButtonList>1</RadioButtonList>
+      <NumericField8 />
+      <NumericField8 />
+      <TextField1 />
+      <TextField4 />
+      <TextField1 />
+      <TextField4 />
+      <RadioButtonList />
+      <NumericField8 />
+      <NumericField8 />
+      <TextField1 />
+      <Ingresos>0.00000000</Ingresos>
+      <Otrosingresos />
+      <Honorarios />
+      <Sueldobasico1>0.00000000</Sueldobasico1>
+      <totalegresos>
+      </totalegresos>
+      <Total>
+      </Total>
+      <Gastosfamiliares>
+      </Gastosfamiliares>
+      <Arriendo>
+      </Arriendo>
+      <RadioButtonList />
+    </infofinanciera>
+    <suscripcionrevistas xfa:dataNode="dataGroup" />
+    <Subform2 xfa:dataNode="dataGroup" />
+    <TITinfosegundosolicitante>
+      <RadioButtonList />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <DateTimeField1 />
+      <TextField1 />
+      <TextField1 />
+      <DateTimeField1 />
+      <RadioButtonList />
+      <TextField1 />
+      <NumericField41 />
+      <RadioButtonList />
+      <Vinculacion />
+      <RadioButtonList />
+      <RadioButtonList />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <NumericField40 />
+      <TextField1 />
+      <TextField1 />
+      <NumericField42 />
+      <NumericField44 />
+      <TextField1 />
+      <NumericField45 />
+      <Vinculacion />
+      <Empleado>0</Empleado>
+      <TextField1 />
+      <TextField1 />
+      <NumericField43 />
+      <TextField1 />
+      <TextField1 />
+      <RadioButtonList />
+      <TextField1 />
+      <TextField1 />
+      <DateTimeField1 />
+      <NumericField46 />
+      <DateTimeField1 />
+      <TextField1 />
+      <NumericField23 />
+      <otrosactivosvalor />
+      <TextField9 />
+      <NumericField7 />
+      <TextField10 />
+      <NumericField24 />
+      <TextField1 />
+      <Ingresos />
+      <Otrosingresos />
+      <Honorarios />
+      <Sueldobasico />
+      <totalegresos>0.00000000</totalegresos>
+      <Total />
+      <Gastosfamiliares />
+      <Arriendo>0.00000000</Arriendo>
+      <RadioButtonList />
+      <TextField1 />
+      <TextField4 />
+      <TextField1 />
+      <TextField4 />
+      <RadioButtonList />
+      <NumericField8 />
+      <NumericField8 />
+      <TextField1 />
+      <TextField4 />
+      <TextField1 />
+      <TextField4 />
+      <RadioButtonList />
+      <NumericField8 />
+      <NumericField8 />
+      <TextField1 />
+      <TextField4 />
+      <NumericField17 />
+      <TextField4 />
+      <TextField13 />
+      <NumericField8 />
+      <TextField1 />
+      <TextField4 />
+      <Vcomercial />
+      <TextField4 />
+      <TextField14 />
+      <NumericField8 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <NumericField47 />
+      <NumericField49 />
+      <NumericField48 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <NumericField12 />
+      <RadioButtonList />
+      <RadioButtonList />
+    </TITinfosegundosolicitante>
+    <Infotarjetajoven>
+      <NumericField8 />
+      <TextField1 />
+      <TextField1 />
+      <TextField4 />
+      <NumericField8 />
+      <TextField1 />
+      <RadioButtonList />
+      <TextField1 />
+      <TextField4 />
+      <DateTimeField1 />
+      <TextField1 />
+      <RadioButtonList />
+      <RadioButtonList />
+      <TextField4 />
+      <TextField1 />
+      <DateTimeField1 />
+      <TextField1 />
+      <RadioButtonList />
+      <RadioButtonList />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField4 />
+      <DateTimeField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <RadioButtonList />
+      <RadioButtonList />
+      <RadioButtonList />
+      <TextField1 />
+      <TextField4 />
+      <DateTimeField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <RadioButtonList />
+      <RadioButtonList />
+      <TextField1 />
+      <TextField4 />
+      <DateTimeField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <RadioButtonList />
+      <RadioButtonList />
+      <TextField1 />
+      <TextField4 />
+      <DateTimeField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <RadioButtonList />
+      <RadioButtonList />
+      <RadioButtonList />
+      <RadioButtonList />
+      <RadioButtonList />
+      <RadioButtonList />
+    </Infotarjetajoven>
+    <Autorizacionesydeclaraciones>
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+    </Autorizacionesydeclaraciones>
+    <Subform1>
+      <Vinculacion />
+      <TextField11 />
+      <TextField12 />
+      <NumericField6 />
+      <TextField11 />
+      <TextField12 />
+      <NumericField6 />
+      <NumericField6 />
+      <Concepto />
+      <TextField12 />
+      <TextField11 />
+      <TextField12 />
+      <TextField11 />
+      <TextField12 />
+      <TextField11 />
+      <TextField12 />
+      <TextField11 />
+      <TextField12 />
+      <TextField11 />
+      <TextField12 />
+      <TextField11 />
+      <Vinculacion />
+      <DateTimeField1 />
+      <NumericField16 />
+      <DateTimeField1 />
+      <NumericField16 />
+      <NumericField16 />
+      <NumericField16 />
+      <NumericField16 />
+      <NumericField16 />
+      <NumericField16 />
+      <TextField1 />
+      <TextField1 />
+      <NumericField16 />
+      <NumericField16 />
+      <NumericField16 />
+      <NumericField16 />
+      <NumericField16 />
+      <NumericField16 />
+      <NumericField16 />
+      <NumericField16 />
+      <Vinculacion />
+      <Vinculacion />
+      <NumericField16 />
+      <NumericField16 />
+      <NumericField16 />
+      <NumericField16 />
+      <NumericField16 />
+      <Vinculacion />
+      <NumericField16 />
+      <NumericField16 />
+      <NumericField16 />
+      <NumericField16 />
+      <NumericField16 />
+      <Vinculacion />
+      <Vinculacion />
+      <Vinculacion />
+      <Vinculacion />
+      <Vinculacion />
+      <Vinculacion />
+      <Vinculacion />
+      <Concepto />
+      <TextField15 />
+      <TextField15 />
+      <TextField1 />
+      <TextField1 />
+      <TextField1 />
+      <TextField16 />
+    </Subform1>
+    <No.Identificación>12278588</No.Identificación>
+    <No.Identificación1 />
+  </form1>
+</xfa:data>

@@ -1,0 +1,78 @@
+﻿a {
+	color: rgb(209, 92, 0); text-decoration: none;
+}
+a:link {
+	color: rgb(209, 92, 0); text-decoration: none;
+}
+a:visited {
+	color: rgb(209, 92, 0); text-decoration: none;
+}
+a:active {
+	color: rgb(209, 92, 0); text-decoration: underline;
+}
+a:hover {
+	color: rgb(209, 92, 0); text-decoration: underline;
+}
+body {
+	margin: 0px; 
+}
+
+.content {
+	color: rgb(69, 40, 23); line-height: 140%; padding-top: 2px; padding-right: 20px; font-family: georgia,serif; font-size: 16px; font-weight: normal;
+}
+.details {
+	font-family: georgia,serif; font-size: 13px; font-weight: normal;
+}
+.intro {
+	color: rgb(69, 40, 23); line-height: 150%; padding-right: 10px; font-family: georgia,serif; font-size: 18px; font-weight: normal;
+}
+.title {
+	color: rgb(97, 146, 171); line-height: 125%; letter-spacing: 1px; padding-top: 5px; padding-bottom: 5px; font-family: georgia,serif; font-size: 11px; font-weight: bold;
+}
+.title_sans {
+	color: rgb(69, 40, 23); line-height: 125%; letter-spacing: 1px; padding-top: 5px; padding-bottom: 4px; font-family: arial,sans-serif; font-size: 10px; font-weight: bold;
+}
+.feed_title {
+	color: rgb(69, 40, 23); line-height: 150%; padding-top: 7px; font-family: georgia,serif; font-size: 12px; font-weight: bold;
+}
+.feed_desc {
+	color: rgb(69, 40, 23); line-height: 150%; font-family: arial,sans-serif; font-size: 10px; font-weight: bold;
+}
+.feed_intro {
+	color: rgb(69, 40, 23); line-height: 150%; padding-bottom: 10px; font-family: georgia,serif; font-size: 12px; font-weight: normal;
+}
+.pad-right {
+	padding-right: 20px;
+}
+.light_brown {
+	
+}
+.blue {
+	color: rgb(97, 146, 171);
+}
+#news {
+	padding-right: 20px; padding-left: 10px;
+}
+.news_item {
+	color: rgb(69, 40, 23); line-height: 150%; padding-bottom: 10px; padding-left: 10px; font-family: Arial, sans-serif; font-size: 10px; font-weight: normal;
+}
+.news_title {
+	color: rgb(69, 40, 23); line-height: 150%; padding-top: 10px; font-family: Arial, sans-serif; font-size: 10px; font-weight: bold;
+}
+.news_date_a {
+	color: rgb(97, 146, 171); line-height: 150%; padding-top: 5px; padding-left: 10px; font-family: georgia,serif; font-size: 14px; font-weight: bold;
+}
+.news_date {
+	color: rgb(97, 146, 171); line-height: 150%; padding-top: 10px; padding-left: 10px; font-family: georgia,serif; font-size: 14px; font-weight: bold;
+}
+.error_title {
+	color: rgb(209, 92, 0); line-height: 150%; padding-top: 10px; padding-bottom: 10px; font-family: georgia,serif; font-size: 36px; font-weight: bold;
+}
+
+#encabezado
+{
+	height: 95px;
+	background-position: left;
+	background-image: url('../img/headerBack.jpg');
+	background-color: #F6F5F5 !important;
+}
